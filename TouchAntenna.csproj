@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20191216150658_insert_data_to_appuser.cs" />
+    <Compile Remove="Migrations\20191216150658_insert_data_to_appuser.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Resources\SwaggerUI\index.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\SwaggerUI\favicon-16x16.png" />
+    <Content Include="Resources\SwaggerUI\favicon-32x32.png" />
+    <Content Include="Resources\SwaggerUI\oauth2-redirect.html" />
+    <Content Include="Resources\SwaggerUI\swagger-ui-bundle.js" />
+    <Content Include="Resources\SwaggerUI\swagger-ui-bundle.js.map" />
+    <Content Include="Resources\SwaggerUI\swagger-ui-standalone-preset.js" />
+    <Content Include="Resources\SwaggerUI\swagger-ui-standalone-preset.js.map" />
+    <Content Include="Resources\SwaggerUI\swagger-ui.css" />
+    <Content Include="Resources\SwaggerUI\swagger-ui.css.map" />
+    <Content Include="Resources\SwaggerUI\swagger-ui.js" />
+    <Content Include="Resources\SwaggerUI\swagger-ui.js.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\SwaggerUI\index.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.6.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.0-rc1.final" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc4" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+</Project>
