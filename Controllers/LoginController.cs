@@ -12,7 +12,7 @@ using TouchAntenna.Models;
 namespace TouchAntenna.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/[controller]/")]
     public class LoginController : ControllerBase
     {
         private IConfiguration _config;
@@ -24,7 +24,8 @@ namespace TouchAntenna.Controllers
             _context = context;
         }
 
-        [HttpGet]
+        
+        [Route("Login")]
         public IActionResult Login(string userid)
         {
             IActionResult response = Unauthorized();
